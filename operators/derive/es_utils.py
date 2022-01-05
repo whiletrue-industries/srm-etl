@@ -39,6 +39,12 @@ class SRMMappingGenerator(MappingGenerator):
 def dump_to_es_and_delete(**kwargs):
     unique_id = uuid.uuid4().hex
     engine: elasticsearch.Elasticsearch = es_instance()
+    try:
+        success = engine.ping()
+        assert success
+    except:
+        print('FAILED TO CONNECT TO ES')
+        return
     indexes = list(kwargs.get('indexes').keys())
     kwargs.setdefault('engine', engine)
     kwargs.setdefault('mapper_cls', SRMMappingGenerator)

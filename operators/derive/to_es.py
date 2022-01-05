@@ -148,6 +148,7 @@ def load_locations_to_es_flow():
             DF.update_resource(-1, name='places'),
             DF.set_type('name', **{'es:autocomplete': True}),
             DF.add_field('score', 'number', calc_score),
+            DF.dump_to_path(f'{settings.DATA_DUMP_DIR}/place_data'),
             dump_to_es_and_delete(
                 indexes=dict(srm__places=[dict(resource_name='places')]),
             ),
@@ -189,6 +190,7 @@ def load_responses_to_es_flow():
         DF.add_field('score', 'number', lambda r: r['count']),
         DF.set_primary_key(['id']),
         print_top,
+        DF.dump_to_path(f'{settings.DATA_DUMP_DIR}/response_data'),
         dump_to_es_and_delete(
             indexes=dict(srm__responses=[dict(resource_name='responses')]),
         ),
