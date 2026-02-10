@@ -6,7 +6,7 @@ import dataflows_airtable as DFA
 from conf import settings
 from srm_tools.stats import Stats
 
-from .mde_utils import load_manual_data
+from mde_utils import load_manual_data
 
 
 CHECKPOINT = 'external-mde'

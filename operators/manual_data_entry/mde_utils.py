@@ -7,7 +7,7 @@ from slugify import slugify
 
 from conf import settings
 
-from ..derive.autocomplete import VERIFY_ORG_ID
+from operators.derive.autocomplete import VERIFY_ORG_ID
 
 from srm_tools.hash import hasher
 from srm_tools.update_table import airtable_updater

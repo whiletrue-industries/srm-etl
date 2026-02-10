@@ -27,12 +27,13 @@ class Report():
             self.records,
             DF.update_package(title=self.name, name=self.slug),
             DF.update_resource(-1, name='report', path='report.csv'),
-            dump_to_ckan(
-                settings.CKAN_HOST,
-                settings.CKAN_API_KEY,
-                settings.CKAN_OWNER_ORG,
-            )
-        ).process()
+        #     dump_to_ckan(
+        #         settings.CKAN_HOST,
+        #         settings.CKAN_API_KEY,
+        #         settings.CKAN_OWNER_ORG,
+        #     )
+         ).process()
+
 
 class Stats():
 

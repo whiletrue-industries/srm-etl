@@ -16,3 +16,4 @@ psycopg2-binary==2.9.9
 elasticsearch==7.13.4
 pyairtable==3.1.1
 lxml==4.9.3
+numpy<2.0.0

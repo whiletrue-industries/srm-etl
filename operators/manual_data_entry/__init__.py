@@ -6,8 +6,8 @@ from conf import settings
 from srm_tools.logger import logger
 from srm_tools.stats import Report, Stats
 from srm_tools.error_notifier import invoke_on
-from .mde_utils import load_manual_data
-from .external import main as load_external_data
+from mde_utils import load_manual_data
+from external import main as load_external_data
 
 stats = Stats()
 
