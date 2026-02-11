@@ -13,6 +13,12 @@
           "dgp": false,
           "admin": true
         },
+      {
+        "name": "ssg_updater",
+        "display": "runs FE Release again in order to update the static site with the latest data",
+        "dgp": false,
+        "admin": true
+      },
         {
             "name": "entities",
             "display": "Enrich Entity Data and Branches using Guidestar and BudgetKey",
